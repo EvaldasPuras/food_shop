@@ -45,10 +45,9 @@ if (isset($_SESSION['user'])) {
     <title>Maisto parduotuvė</title>
 
 
-    <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="prisijungti_stylesheet.css">
+	<link rel="stylesheet" href="../style/prisijungti_stylesheet.css">
   </head>
 
   <body>
@@ -63,10 +62,8 @@ if (isset($_SESSION['user'])) {
         <h1 class="h3 mb-3 font-weight-normal">Prisijungimas</h1>
       </div>  
 	  <?php
-	  //pasiimam vartotoja is duombazes (lenteles users), kur vartotojas egzistuoja
 		if (isset($_POST['email']) && isset($_POST['password'])) {
 			$row = mysqli_fetch_row($mysqli->query("SELECT * FROM users WHERE email = '".$_POST['email']."' AND password = '".md5($_POST['password'])."'"));
-			//jei ivesti duomenys atitinka - tai sukuriama sesija
 			if (isset($row)) {
 				 $_SESSION['user'] = $row;
 
@@ -94,7 +91,6 @@ if (isset($_SESSION['user'])) {
 	  <a href="registruotis.php">
 		<button class="btn btn-lg btn-secondary btn-block w-100 my-3" type="button">Registruotis</button>
 		</a>
-      <!--<p class="mt-5 mb-3 text-muted text-center">&copy; 2022</p>-->
     </form>
 	
   </body>

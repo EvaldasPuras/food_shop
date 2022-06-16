@@ -21,7 +21,7 @@
 					<tbody>
 					
 					<?php
-						include('controllers/get_dishes_of_food_shop.php');
+						include('../controllers/get_dishes_of_food_shop.php');
 						
 						if (mysqli_num_rows($result) > 0){
 							// output data of each row
@@ -32,7 +32,7 @@
 								echo "<td>";
 							?>
 							
-							<form action="controllers/add_dish_to_shopping_cart.php" method="post">
+							<form action="../controllers/add_dish_to_shopping_cart.php" method="post">
 							
 								<input type="hidden" name="dish_to_add" value="<?php echo $row["name"] ?>"><br>
 								<input type="submit" value="įdėti į krepšelį">
@@ -59,7 +59,7 @@
 				<br>
 				
 				
-								<form action="controllers/go_back_to_shop_menu.php">
+								<form action="../controllers/go_back_to_shop_menu.php">
 							
 							<input type="submit" value="Atgal">
 				</form>

@@ -2,7 +2,7 @@
 include('open_db_connection.php'); //opening connection to database
 echo "<br>";
 //SQL query
-	$sql_query = "SELECT `name`, `code`, `address` FROM `food_shops`"; //SQL query
+	$sql_query = "SELECT `id`, `name`, `code`, `address` FROM `food_shops`"; //SQL query
 	
 	$result = mysqli_query($connection, $sql_query); //getting data from database and saving it into $result variable
 	

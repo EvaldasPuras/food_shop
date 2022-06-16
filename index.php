@@ -1,1 +1,1 @@
-<?php header("Location: prisijungti.php"); ?>
+<?php header("Location: views/prisijungti.php"); ?>
