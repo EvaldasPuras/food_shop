@@ -63,11 +63,11 @@ if (isset($_SESSION['user'])) {
 			if ($_POST['slaptazodis'] != $_POST['pakartoti_slaptazodi']) {
 				echo "<div class='alert alert-danger'>Slaptažodžiai nesutampa!</div>";
 			} else {
-				//ar toks mailas egzistuoja
+				//ar yra toks email duomenų bazėje
 				if (mysqli_num_rows($mysqli->query("SELECT * FROM users WHERE email = '".$_POST['email']."'")) > 0) {
 					echo "<div class='alert alert-danger'>Toks el. paštas jau egzistuoja!</div>";
 				} else {
-					//ITERPIAMI NAUJO VARTOTOJO DUOMENYS I LENTELE USERS
+					//Naujo vartotojo duomenys įterpiami į lentelę users
 					if ($mysqli->query("INSERT INTO users (username, email, password, type) VALUES ('".$_POST['username']."', '".$_POST['email']."', '".md5($_POST['password'])."', 0)") === TRUE) {
 						echo "<div class='alert alert-success'>Sėkmingai užsiregistravote. Dabar būsite perkelti į prisijungimo langą.</div><meta http-equiv='refresh' content='3;url=prisijungti.php' />";
 						
@@ -76,7 +76,7 @@ if (isset($_SESSION['user'])) {
 						$result = $mysqli->query($query);
 
 					} else {
-						// echo "NEPAVYKO IKELTI I DUOM BAZE";
+						// echo "Nepavyko įkelti duomenų į duomenų bazę";
 					}
 				}
 			}

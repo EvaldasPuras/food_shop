@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<style>
+		
+	
+	</style>
 </head>
 <body>
 	<h1>Maisto įstaigų Redagavimas</h1>
@@ -15,6 +19,15 @@
 		</thead>
 					
 		<tbody>
+		
+					<!-- -->
+					
+					
+						<form action="food_shop_add_view.php" method="post">
+								<input type="submit" class="btn btn-primary" value="Pridėti naują maitinimo įstaigą">
+						</form>
+					
+					<!-- -->
 					
 			<?php
 				include('../controllers/get_all_food_shop_data_from_db.php');
@@ -54,7 +67,7 @@
 							</form>
 						</td>
 					
-
+					
 					
 					<?php
 					echo "</tr>";
@@ -65,6 +78,7 @@
 			}
 					
 					?>
+					
 					
 			</tbody>
 		</table>
