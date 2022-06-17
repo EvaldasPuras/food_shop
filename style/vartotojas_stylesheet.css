@@ -8,3 +8,7 @@ body {
 .position{
 	position: static;
 }
+
+.table td {
+		  width: 33%;
+		}

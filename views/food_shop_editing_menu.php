@@ -15,6 +15,8 @@
 				<th>Pavadinimas</th>
 				<th>Kodas</th>
 				<th>Adresas</th>
+				<th></th>
+				<th></th>
 			</tr>
 		</thead>
 					
@@ -24,7 +26,7 @@
 					
 					
 						<form action="food_shop_add_view.php" method="post">
-								<input type="submit" class="btn btn-primary" value="Pridėti naują maitinimo įstaigą">
+								<input style="margin-bottom: 35px" type="submit" class="btn btn-primary" value="Pridėti naują maitinimo įstaigą">
 						</form>
 					
 					<!-- -->
@@ -55,15 +57,16 @@
 						</td>
 					
 						<td>		
-							<input type="hidden" name="shop_to_update" value="<?php echo $row["id"] ?>"><br>
 							<input type="submit" class="btn btn-primary" value="Patvirtinti įstaigos duomenis">
+							<input type="hidden" name="shop_to_update" value="<?php echo $row["id"] ?>"><br>
+							
 						</td>
 					</form>
 					
 						<td>
 							<form action="../controllers/delete_shop_from_db.php" method="post">
-								<input type="hidden" name="shop_to_delete" value="<?php echo $row["id"] ?>"><br>
 								<input type="submit" class="btn btn-warning" value="Pašalinti įstaigą">
+								<input type="hidden" name="shop_to_delete" value="<?php echo $row["id"] ?>"><br>
 							</form>
 						</td>
 					

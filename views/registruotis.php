@@ -58,9 +58,9 @@ if (isset($_SESSION['user'])) {
         <h1 class="h3 mb-3 font-weight-normal">Registruotis</h1>
       </div>  
 	  <?php
-		if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['slaptazodis']) && isset($_POST['pakartoti_slaptazodi'])) {
+		if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['pakartoti_slaptazodi'])) {
 			//ar nesutampa slaptazodziai
-			if ($_POST['slaptazodis'] != $_POST['pakartoti_slaptazodi']) {
+			if ($_POST['password'] != $_POST['pakartoti_slaptazodi']) {
 				echo "<div class='alert alert-danger'>Slaptažodžiai nesutampa!</div>";
 			} else {
 				//ar yra toks email duomenų bazėje

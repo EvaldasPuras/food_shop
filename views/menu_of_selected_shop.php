@@ -15,6 +15,7 @@
 						<tr>
 							<th>Patiekalas</th>
 							<th>Aprašymas</th>
+							<th></th>
 						</tr>
 					</thead>
 					
@@ -33,9 +34,9 @@
 							?>
 							
 							<form action="../controllers/add_dish_to_shopping_cart.php" method="post">
-							
+								<button class="btn btn-primary" type="submit" value="Pasirinkti">Įdėti į krepšelį</button>
 								<input type="hidden" name="dish_to_add" value="<?php echo $row["name"] ?>"><br>
-								<input type="submit" value="įdėti į krepšelį">
+								
 								
 								
 							</form>

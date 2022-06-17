@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
 <body>
 	<h1>Maisto įstaigų meniu</h1>
 				<table class="table table-hover">
@@ -10,6 +8,7 @@
 							<th>Maisto įstaiga</th>
 							<th>Kodas</th>
 							<th>Adresas</th>
+							<th></th>
 						</tr>
 					</thead>
 					
@@ -29,8 +28,8 @@
 							?>
 							
 							<form action="../controllers/select_shop.php" method="post">
-							<input type="hidden" name="selected_shop_name" value="<?php echo $row["name"] ?>"><br>
-							<input type="submit" value="Pasirinkti">
+								<button class="btn btn-primary" type="submit" value="Pasirinkti">Pasirinkti</button>
+								<input type="hidden" name="selected_shop_name" value="<?php echo $row["name"] ?>"><br>
 							</form>
 							
 							<?php

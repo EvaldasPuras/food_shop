@@ -65,7 +65,7 @@ if (!isset($_SESSION['user'])) {
 				
 				<div class="ms-auto">
 						<a href="shopping_cart.php" class="float-right">
-							<button type="button" class="btn btn-success">Patiekalų krepšelis</button>
+							<button style="margin-right: 15px" type="button" class="btn btn-success">Patiekalų krepšelis</button>
 						</a>
 				</div>
 

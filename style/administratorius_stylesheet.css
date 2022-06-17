@@ -24,3 +24,7 @@
 .position{
 	position: static;
 }
+
+.table td {
+		  width: 30%;
+		}
